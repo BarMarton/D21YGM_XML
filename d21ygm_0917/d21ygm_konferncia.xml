@@ -1,0 +1,21 @@
+<konferencia>
+	<cim>Hogyan készítsünk XML dokumentumot</cim>
+	<datum>2024-09-17</datum>
+	<helyszin>Inf/103</helyszin>
+	<hallgatok>
+		<hallgato>
+			<nev>John Souls</nev>
+			<lakcim>Miskolc</lakcim>
+		</hallgato>
+		<hallgato>
+			<nev>Jane Doe</nev>
+			<lakcim>Jane Street</lakcim>
+		</hallgato>
+		<hallgato>
+			<nev>Példa Béla</nev>
+			<lakcim>Példa utca</lakcim>
+		</hallgato>
+	</hallgatok>
+	<eloado nev="Harrison Ford" lakcim="Hollywood" adoszam="123456"/>
+</konferencia>
+	
