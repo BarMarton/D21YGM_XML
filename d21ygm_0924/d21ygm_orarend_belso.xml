@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE XY:orarend [
+        <!ATLIST id ID REQUIRED)>
+        <!ATLIST típus (eloadas | gyakorlat) "előadás">
+        <!ElEMENT targy (#PCDATA)>
+        <!ELEMENT idopont(nap, tol, ig)>
+        <!ELEMENT nap (#PCDATA)>
+        <!ELEMENT tol (#PCDATA)>
+        <!ELEMENT ig (#PCDATA)>
+        <!ELEMENT helyszin (#PCDATA)>
+        <!ELEMENT oktato (#PCDATA)>
+        <!ELEMENT szak (#PCDATA)>
+        <!ELEMENT ora(targy,idopont,helyszin,oktato,szak)>
+        ]>
+
+<XY:orarend>
+    <ora id="01" típus="Előadás">
+        <targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>10:00</tol>
+            <ig>11:30</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>TODO</szak>
+    </ora>
+    <ora id="02" típus="Gyakorlat">
+        <targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>12:00</tol>
+            <ig>13:30</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>TODO</szak>
+    </ora>
+    <ora id="03" típus="Gyakorlat">
+        <targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>10:00</tol>
+            <ig>11:30</ig>
+        </idopont>
+        <helyszin>X. Előadó</helyszin>
+        <oktato>Fazekas Levente Áron</oktato>
+        <szak>TODO</szak>
+    </ora>
+    <ora id="04" típus="Előadás">
+        <targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>16:00</tol>
+            <ig>17:30</ig>
+        </idopont>
+        <helyszin>XXXII. Előadó</helyszin>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>TODO</szak>
+    </ora>
+    <ora id="05" típus="NA">
+        <targy>Testnevelés 1</targy>
+        <idopont>
+            <nap>NA</nap>
+            <tol>NA</nap>
+            <ig>NA</nap>
+        </idopont>
+        <helyszin>UNI-Gym</helyszin>
+        <oktato>Kató Csaba</oktato>
+        <szak>TODO</szak>
+    </ora>
+    <ora id="06" típus="NA">
+        <targy>Szakdolgozatkészítés II.</targy>
+        <idopont>
+            <nap>NA</nap>
+            <tol>NA</nap>
+            <ig>NA</nap>
+        </idopont>
+        <helyszin>NA</nap>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>TODO</szak>
+    </ora>
+</XY:orarend>

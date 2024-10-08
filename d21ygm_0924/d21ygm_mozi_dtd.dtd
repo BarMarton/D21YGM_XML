@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT mozi (film*)>
+
+<!ELEMENT film (rendezo,szinesz,iro)>
+<!ATLIST film id ID REQUIRED>
+<!ATLIST film mufaj (horror | romantikus | thriller) "horror">
+
+<!ELEMENT rendezo EMPTY>
+<!ATLIST rendezo id ID REQUIRED>
+<!ATLIST nev (DATA SUPLIED)>
+
+<!ELEMENT szinesz EMPTY>
+<!ATLIST id ID REQUIRED>
+<!ATLIST nev (DATA SUPLIED)>
+
+<!ELEMENT iro EMPTY>
+<!ATLIST id ID REQUIRED>
