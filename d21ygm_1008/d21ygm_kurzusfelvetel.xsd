@@ -1,0 +1,43 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="d21ygm_kurzusfelvetel" type="d21ygm_kurzusfelvetelTipus"/>
+  <xs:complexType name="szakTipus">
+      <xs:simpleContent>
+          <xs:extension base="xs:string">
+              <xs:attribute type="xs:integer" name="evf"/>
+          </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="hallgatoTipus">
+      <xs:sequence>
+          <xs:element type="xs:string" name="hnev"/>
+          <xs:element type="xs:integer" name="szulev"/>
+          <xs:element type="szakTipus" name="szak"/>
+      </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kurzusTipus">
+      <xs:sequence>
+          <xs:element type="xs:string" name="kurzusnev"/>
+          <xs:element type="xs:integer" name="kredit"/>
+          <xs:element type="xs:string" name="hely"/>
+          <xs:element type="xs:string" name="idopont"/>
+          <xs:element type="xs:string" name="oktato"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="jovahagyas" use="optional"/>
+      <xs:attribute type="xs:string" name="nyelv" use="optional"/>
+      <xs:attribute type="xs:string" name="oraado" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="kurzusokTipus">
+      <xs:sequence>
+          <xs:element type="kurzusTipus" name="kurzus" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="d21ygm_kurzusfelvetelTipus">
+      <xs:sequence>
+          <xs:element type="hallgatoTipus" name="hallgato"/>
+          <xs:element type="kurzusokTipus" name="kurzusok"/>
+      </xs:sequence>
+      <xs:attribute type="xs:short" name="tanev"/>
+      <xs:attribute type="xs:string" name="egyetem"/>
+  </xs:complexType>
+</xs:schema>

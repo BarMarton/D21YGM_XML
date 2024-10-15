@@ -1,0 +1,18 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="d21ygm_vendeglatasTipus">
+    </xs:simpleType>
+    <xs:complexType name="etteremTipus">
+    </xs:complexType>
+    <xs:complexType name="foszakacsTipus">
+    </xs:complexType>
+    <xs:complexType name="szakacsTipus">
+    </xs:complexType>
+    <xs:complexType name="gyakornok">
+    </xs:complexType>
+    <xs:complexType name="vendeg">
+    </xs:complexType>
+    <xs:complexType name="rendeles">
+    </xs:complexType>
+
+    
+</xs:schema>
