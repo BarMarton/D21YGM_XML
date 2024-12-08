@@ -1,4 +1,4 @@
-<XY:orarend>
+<orarend>
     <ora id="01" típus="Előadás">
         <targy>Adatkezelés XML-ben</targy>
         <idopont>
@@ -65,4 +65,4 @@
         <oktato>Dr. Agárdi Anita</oktato>
         <szak>TODO</szak>
     </ora>
-</XY:orarend>
+</orarend>

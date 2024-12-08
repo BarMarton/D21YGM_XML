@@ -1,68 +1,136 @@
-<XY:orarend>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<orarend>
+        
     <ora id="01" típus="Előadás">
+                
         <targy>Adatkezelés XML-ben</targy>
+                
         <idopont>
+                        
             <nap>Kedd</nap>
+                        
             <tol>10:00</tol>
+                        
             <ig>11:30</ig>
+                    
         </idopont>
+                
         <helyszin>Inf/103</helyszin>
+                
         <oktato>Dr. Bednarik László</oktato>
+                
         <szak>TODO</szak>
+            
     </ora>
+        
     <ora id="02" típus="Gyakorlat">
+                
         <targy>Adatkezelés XML-ben</targy>
+                
         <idopont>
+                        
             <nap>Kedd</nap>
+                        
             <tol>12:00</tol>
+                        
             <ig>13:30</ig>
+                    
         </idopont>
+                
         <helyszin>Inf/103</helyszin>
+                
         <oktato>Dr. Bednarik László</oktato>
+                
         <szak>TODO</szak>
+            
     </ora>
+        
     <ora id="03" típus="Gyakorlat">
+                
         <targy>Mesterséges intelligencia alapok</targy>
+                
         <idopont>
+                        
             <nap>Szerda</nap>
+                        
             <tol>10:00</tol>
+                        
             <ig>11:30</ig>
+                    
         </idopont>
+                
         <helyszin>X. Előadó</helyszin>
+                
         <oktato>Fazekas Levente Áron</oktato>
+                
         <szak>TODO</szak>
+            
     </ora>
+        
     <ora id="04" típus="Előadás">
+                
         <targy>Mesterséges intelligencia alapok</targy>
+                
         <idopont>
+                        
             <nap>Szerda</nap>
+                        
             <tol>16:00</tol>
+                        
             <ig>17:30</ig>
+                    
         </idopont>
+                
         <helyszin>XXXII. Előadó</helyszin>
+                
         <oktato>Kunné Dr. Tamás Judit</oktato>
+                
         <szak>TODO</szak>
+            
     </ora>
+        
     <ora id="05" típus="NA">
+                
         <targy>Testnevelés 1</targy>
+                
         <idopont>
+                        
             <nap>NA</nap>
+                        
             <tol>NA</tol>
+                        
             <ig>NA</ig>
+                    
         </idopont>
+                
         <helyszin>UNI-Gym</helyszin>
+                
         <oktato>Kató Csaba</oktato>
+                
         <szak>TODO</szak>
+            
     </ora>
+        
     <ora id="06" típus="NA">
+                
         <targy>Szakdolgozatkészítés II.</targy>
+                
         <idopont>
+                        
             <nap>NA</nap>
+                        
             <tol>NA</tol>
+                        
             <ig>NA</ig>
+                    
         </idopont>
+                
         <helyszin>NA</helyszin>
+                
         <oktato>Dr. Agárdi Anita</oktato>
+                
         <szak>TODO</szak>
+            
     </ora>
-</XY:orarend>
+    
+</orarend>

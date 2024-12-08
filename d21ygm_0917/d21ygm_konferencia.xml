@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferencia id="01">
+    <cim>Bevezetés az XML-be</cim>
+    <helyszin>Inf/103.</helyszin>
+    <dátum>2024.09.17</dátum>
+    <előadó id="ea_01">
+        <név>Dr. Bednarik László</név>
+        <adószám>12345678</adószám>
+        <lakcím>1600 Pennsylvania Avenue NW, Washington, DC 20500, Egyesült Államok</lakcím>
+    </előadó>
+    <hallgatók>
+        <hallgató id="01">
+            <név>Barabás Márton</név>
+            <név>Av. Gustave Eiffel, 75007 Paris, Franciaország</név>
+        </hallgató>
+        <hallgató id="02">
+            <név>Példa Béla</név>
+            <név>Piazza del Duomo, 56126 Pisa PI, Olaszország</név>
+        </hallgató>
+    </hallgatók>
+</konferencia>

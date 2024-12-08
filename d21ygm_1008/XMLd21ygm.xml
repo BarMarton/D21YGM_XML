@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<d21ygm_vendeglatas>
+    <etterem ekod="01">
+        <csillag>0</csillag>
+        <nev>Béla kifőzdéje</nev>
+        <cim>
+            <varos>Mád</varos>
+            <utca>Fő út.</utca>
+            <hazszam>12</hazszam>
+        </cim>
+    </etterem>
+    <foszakacs fkod="01">
+        <nev>Példa Béla</nev>
+        <eletkor>36</eletkor>
+        <vegzettseg>Szakács</vegzettseg>
+    </foszakacs>
+    <rendeles fid0="01" fid1="A">
+        <osszeg>1500</osszeg>
+        <etel>Babfőzelék</etel>
+    </rendeles>
+    <rendeles fid0="01" fid1="B">
+        <osszeg>2000</osszeg>
+        <etel>Hamburger</etel>
+    </rendeles>
+    <rendeles fid0="01" fid1="C">
+        <osszeg>3500</osszeg>
+        <etel>Steak</etel>
+    </rendeles>
+    <vendeg vkod="A">
+        <nev>János</nev>
+        <eletkor>25</eletkor>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Fő út.</utca>
+            <hazszam>10</hazszam>
+        </cim>
+    </vendeg>
+    <vendeg vkod="B">
+        <nev>Ágnes</nev>
+        <eletkor>21</eletkor>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Álmos út.</utca>
+            <hazszam>24</hazszam>
+        </cim>
+    </vendeg>
+    <vendeg vkod="C">
+        <nev>Levente</nev>
+        <eletkor>26</eletkor>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Bagoly utca</utca>
+            <hazszam>3</hazszam>
+        </cim>
+    </vendeg>
+    <szakacs szkod="01" fid="01">
+        <nev>Janó</nev>
+        <reszleg>Levesek</reszleg>
+        <vegzettseg>Szakács</vegzettseg>
+    </szakacs>
+    <gyakornok gykod="01" fid="01">
+        <nev>Júlia</nev>
+        <muszak>Péntek</muszak>
+        <gyakorlat>
+            <kezdete>2024</kezdete>
+            <idotartama>8 hét</idotartama>
+        </gyakorlat>
+    </gyakornok>
+</d21ygm_vendeglatas>

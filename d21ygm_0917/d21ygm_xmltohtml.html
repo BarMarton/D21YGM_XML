@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+			<title>Orarend</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f9f9f9;
+                    margin: 0;
+                    padding: 20px;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    background-color: #fff;
+                }
+
+                thead tr {
+                    background-color: #0073e6;
+                    color: #fff;
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                thead th {
+                    padding: 12px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+
+                tbody tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                tbody tr:hover {
+                    background-color: #d9f1ff;
+                }
+
+                tbody td {
+                    padding: 10px;
+                    font-size: 14px;
+                    color: #333;
+                }
+
+                th, td {
+                    border: 1px solid #ddd;
+                    text-align: center;
+                }
+
+                td:first-child, th:first-child {
+                    text-align: left;
+                    padding-left: 15px;
+                }
+
+                td:last-child, th:last-child {
+                    text-align: center;
+                }
+
+                caption {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    color: #333;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-align: left;
+                }
+
+                /* Add responsiveness */
+                @media screen and (max-width: 768px) {
+                    table {
+                        display: block;
+                        overflow-x: auto;
+                    }
+
+                    th, td {
+                        font-size: 12px;
+                        padding: 8px;
+                    }
+                }
+
+            </style>
+		</head>
+		<body>
+			<table border=1>
+				<thead>
+					<tr>
+						<th>targy</th>
+						<th>idopont</th>
+						<th>helyszin</th>
+						<th>oktato</th>
+						<th>szak</th>
+						<th>id</th>
+						<th>típus</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Adatkezelés XML-ben</td>
+						<td>Kedd|10:00|11:30</td>
+						<td>Inf/103</td>
+						<td>Dr. Bednarik László</td>
+						<td>TODO</td>
+						<td>01</td>
+						<td>Előadás</td>
+					</tr>
+					<tr>
+						<td>Adatkezelés XML-ben</td>
+						<td>Kedd|12:00|13:30</td>
+						<td>Inf/103</td>
+						<td>Dr. Bednarik László</td>
+						<td>TODO</td>
+						<td>02</td>
+						<td>Gyakorlat</td>
+					</tr>
+					<tr>
+						<td>Mesterséges intelligencia alapok</td>
+						<td>Szerda|10:00|11:30</td>
+						<td>X. Előadó</td>
+						<td>Fazekas Levente Áron</td>
+						<td>TODO</td>
+						<td>03</td>
+						<td>Gyakorlat</td>
+					</tr>
+					<tr>
+						<td>Mesterséges intelligencia alapok</td>
+						<td>Szerda|16:00|17:30</td>
+						<td>XXXII. Előadó</td>
+						<td>Kunné Dr. Tamás Judit</td>
+						<td>TODO</td>
+						<td>04</td>
+						<td>Előadás</td>
+					</tr>
+					<tr>
+						<td>Testnevelés 1</td>
+						<td>NA|NA|NA</td>
+						<td>UNI-Gym</td>
+						<td>Kató Csaba</td>
+						<td>TODO</td>
+						<td>05</td>
+						<td>NA</td>
+					</tr>
+					<tr>
+						<td>Szakdolgozatkészítés II.</td>
+						<td>NA|NA|NA</td>
+						<td>NA</td>
+						<td>Dr. Agárdi Anita</td>
+						<td>TODO</td>
+						<td>06</td>
+						<td>NA</td>
+					</tr>
+				</tbody>
+			</table>
+		</body>
+	</html>

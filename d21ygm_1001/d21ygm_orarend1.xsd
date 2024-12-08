@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:XY="XY" targetNamespace="XY" elementFormDefault="qualified">
+
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d+" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="típusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Előadás" />
+            <xs:enumeration value="Gyakorlat" />
+            <xs:enumeration value="NA" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="textType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="idopontType">
+        <xs:sequence>
+            <xs:element name="nap" type="textType" />
+            <xs:element name="tol" type="textType" />
+            <xs:element name="ig" type="textType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="oraType">
+        <xs:sequence>
+            <xs:element name="targy" type="textType" />
+            <xs:element name="idopont" type="idopontType" />
+            <xs:element name="helyszin" type="textType" />
+            <xs:element name="oktato" type="textType" />
+            <xs:element name="szak" type="textType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="idType" use="required" />
+        <xs:attribute name="típus" type="típusType" use="required" />
+    </xs:complexType>
+
+    <xs:element name="orarend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ora" type="oraType" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
