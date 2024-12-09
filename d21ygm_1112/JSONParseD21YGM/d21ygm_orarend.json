@@ -1,0 +1,84 @@
+{
+	"orarend": {
+		"ora": [
+			{
+				"targy": "Adatkezelés XML-ben",
+				"idopont": {
+					"nap": "Kedd",
+					"tol": "10:00",
+					"ig": "11:30"
+				},
+				"helyszin": "Inf/103",
+				"oktato": "Dr. Bednarik László",
+				"szak": "TODO",
+				"_id": "01",
+				"_típus": "Előadás"
+			},
+			{
+				"targy": "Adatkezelés XML-ben",
+				"idopont": {
+					"nap": "Kedd",
+					"tol": "12:00",
+					"ig": "13:30"
+				},
+				"helyszin": "Inf/103",
+				"oktato": "Dr. Bednarik László",
+				"szak": "TODO",
+				"_id": "02",
+				"_típus": "Gyakorlat"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "Szerda",
+					"tol": "10:00",
+					"ig": "11:30"
+				},
+				"helyszin": "X. Előadó",
+				"oktato": "Fazekas Levente Áron",
+				"szak": "TODO",
+				"_id": "03",
+				"_típus": "Gyakorlat"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "Szerda",
+					"tol": "16:00",
+					"ig": "17:30"
+				},
+				"helyszin": "XXXII. Előadó",
+				"oktato": "Kunné Dr. Tamás Judit",
+				"szak": "TODO",
+				"_id": "04",
+				"_típus": "Előadás"
+			},
+			{
+				"targy": "Testnevelés 1",
+				"idopont": {
+					"nap": "NA",
+					"tol": "NA",
+					"ig": "NA"
+				},
+				"helyszin": "UNI-Gym",
+				"oktato": "Kató Csaba",
+				"szak": "TODO",
+				"_id": "05",
+				"_típus": "NA"
+			},
+			{
+				"targy": "Szakdolgozatkészítés II.",
+				"idopont": {
+					"nap": "NA",
+					"tol": "NA",
+					"ig": "NA"
+				},
+				"helyszin": "NA",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "TODO",
+				"_id": "06",
+				"_típus": "NA"
+			}
+		]
+	}
+}

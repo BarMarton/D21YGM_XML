@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Schedule Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .block {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .block h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .block p {
+            margin: 5px 0;
+            line-height: 1.5;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule</h1>
+        <div id="schedule"></div>
+    </div>
+
+    <script>
+        async function fetchJSON(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(error);
+                document.getElementById('schedule').innerText = "Hiba";
+            }
+        }
+
+        function renderSchedule(data) {
+            const scheduleContainer = document.getElementById('schedule');
+            scheduleContainer.innerHTML = '';
+
+            const classes = data.orarend.ora;
+
+            classes.forEach(item => {
+                const block = document.createElement('div');
+                block.className = 'block';
+
+                block.innerHTML = `
+                    <h3>${item.targy}</h3>
+                    <p><strong>Nap:</strong> ${item.idopont.nap}</p>
+                    <p><strong>Idő:</strong> ${item.idopont.tol} - ${item.idopont.ig}</p>
+                    <p><strong>Helyszín:</strong> ${item.helyszin}</p>
+                    <p><strong>Oktató:</strong> ${item.oktato}</p>
+                    <p><strong>Szak:</strong> ${item.szak}</p>
+                    <p><strong>ID:</strong> ${item._id}</p>
+                    <p><strong>Típus:</strong> ${item._típus}</p>
+                `;
+
+                scheduleContainer.appendChild(block);
+            });
+        }
+
+        fetchJSON('d21ygm_orarend.json').then(data => {
+            if (data) renderSchedule(data);
+        });
+    </script>
+</body>
+</html>
