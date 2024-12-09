@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Gyökér elem -->
+    <xs:element name="Légforgalom">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Kapitány" maxOccurs="unbounded" type="KapitányTípus"/>
+                <xs:element name="Repülő" maxOccurs="unbounded" type="RepülőTípus"/>
+                <xs:element name="Járat" maxOccurs="unbounded" type="JáratTípus"/>
+                <xs:element name="Reptér" maxOccurs="unbounded" type="ReptérTípus"/>
+                <xs:element name="Kifutópálya" maxOccurs="unbounded" type="KifutópályaTípus"/>
+                <xs:element name="Tartalmaz" maxOccurs="unbounded" type="TartalmazTípus"/>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Kulcsok -->
+        <xs:key name="KapitányId">
+            <xs:selector xpath="Kapitány"/>
+            <xs:field xpath="@személyi_azonosító"/>
+        </xs:key>
+        <xs:keyref name="RepülőKapitány" refer="KapitányId">
+            <xs:selector xpath="Repülő"/>
+            <xs:field xpath="@Kapitány"/>
+        </xs:keyref>
+
+        <xs:key name="Hivójel">
+            <xs:selector xpath="Repülő"/>
+            <xs:field xpath="@Hívójel"/>
+        </xs:key>
+        <xs:keyref name="JáratRepülő" refer="Hívójel">
+            <xs:selector xpath="Járat"/>
+            <xs:field xpath="@id"/>
+        </xs:keyref>
+
+        <xs:key name="JáratId">
+            <xs:selector xpath="Járat"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="TartalmazJárat" refer="JáratId">
+            <xs:selector xpath="Tartalmaz"/>
+            <xs:field xpath="@Járat"/>
+        </xs:keyref>
+
+        <xs:key name="IATA">
+            <xs:selector xpath="Reptér"/>
+            <xs:field xpath="@IATA"/>
+        </xs:key>
+        <xs:keyref name="TartalmazStart" refer="IATA">
+            <xs:selector xpath="Tartalmaz"/>
+            <xs:field xpath="@Start"/>
+        </xs:keyref>
+        <xs:keyref name="TartalmazCél" refer="IATA">
+            <xs:selector xpath="Tartalmaz"/>
+            <xs:field xpath="@Cél"/>
+        </xs:keyref>
+        <xs:keyref name="KifutópályaFid" refer="IATA">
+            <xs:selector xpath="Kifutópálya"/>
+            <xs:field xpath="@fid"/>
+        </xs:keyref>
+
+    </xs:element>
+
+    <!-- Egyszerű típusok -->
+    <xs:simpleType name="IgenNemType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Igen"/>
+            <xs:enumeration value="Nem"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DátumTípus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IATATípus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Kapitány Típus -->
+    <xs:complexType name="KapitányTípus">
+        <xs:sequence>
+            <xs:element name="Vezetéknév" type="xs:string"/>
+            <xs:element name="Utónév" type="xs:string"/>
+            <xs:element name="Repült" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="személyi_azonosító" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Repülő Típus -->
+    <xs:complexType name="RepülőTípus">
+        <xs:sequence>
+            <xs:element name="Gyártó" type="xs:string"/>
+            <xs:element name="Típus" type="xs:string"/>
+            <xs:element name="Szín" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="Kapitány" type="xs:string" use="required"/>
+        <xs:attribute name="Hívójel" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Járat Típus -->
+    <xs:complexType name="JáratTípus">
+        <xs:sequence>
+            <xs:element name="Indulás" type="DátumTípus"/>
+            <xs:element name="Érkezés" type="DátumTípus"/>
+            <xs:element name="Hossz" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Reptér Típus -->
+    <xs:complexType name="ReptérTípus">
+        <xs:sequence>
+            <xs:element name="Ország" type="xs:string"/>
+            <xs:element name="Város" type="xs:string"/>
+            <xs:element name="Légiforgalom" type="IgenNemType"/>
+        </xs:sequence>
+        <xs:attribute name="IATA" type="IATATípus" use="required"/>
+    </xs:complexType>
+
+    <!-- Kifutópálya Típus -->
+    <xs:complexType name="KifutópályaTípus">
+        <xs:sequence>
+            <xs:element name="Paraméterek" type="ParaméterekTípus"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="fid" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Paraméterek Típus -->
+    <xs:complexType name="ParaméterekTípus">
+        <xs:sequence>
+            <xs:element name="Meredekség" type="xs:integer"/>
+            <xs:element name="Hossz" type="xs:integer"/>
+            <xs:element name="Irány" type="xs:integer"/>
+            <xs:element name="Aszfalt" type="IgenNemType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Tartalmaz Típus -->
+    <xs:complexType name="TartalmazTípus">
+        <xs:attribute name="Járat" type="xs:string" use="required"/>
+        <xs:attribute name="Start" type="xs:string" use="required"/>
+        <xs:attribute name="Cél" type="xs:string" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

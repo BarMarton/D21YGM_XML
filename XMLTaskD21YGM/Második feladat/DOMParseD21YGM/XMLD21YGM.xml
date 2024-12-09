@@ -1,0 +1,142 @@
+<Légforgalom>
+
+    <!-- Kapitányok -->
+    <Kapitány személyi_azonosító="01">
+        <Vezetéknév>Barabás</Vezetéknév>
+        <Utónév>Márton</Utónév>
+        <Repült>9000</Repült>
+    </Kapitány>
+    <Kapitány személyi_azonosító="02">
+        <Vezetéknév>Tóth</Vezetéknév>
+        <Utónév>Tibor</Utónév>
+        <Repült>7000</Repült>
+    </Kapitány>
+    <Kapitány személyi_azonosító="03">
+        <Vezetéknév>Példa</Vezetéknév>
+        <Utónév>Béla</Utónév>
+        <Repült>15000</Repült>
+    </Kapitány>
+
+    <!-- Repülőgépek -->
+    <Repülő Kapitány="01" Hívójel="CPA238">
+        <Gyártó>Airbus</Gyártó>
+        <Típus>A400M Atlas</Típus>
+        <Szín>Szürke</Szín>
+    </Repülő>
+    <Repülő Kapitány="02" Hívójel="RYR997">
+        <Gyártó>Airbus</Gyártó>
+        <Típus>A320-232</Típus>
+        <Szín>Fehér Kék Sárga</Szín>
+    </Repülő>
+    <Repülő Kapitány="03" Hívójel="BCS5867">
+        <Gyártó>Boeing</Gyártó>
+        <Típus>737-49R</Típus>
+        <Szín>Fehér</Szín>
+    </Repülő>
+
+    <!-- Járatok -->
+    <Járat id="CPA238">
+        <Indulás>2024-12-07T19:00</Indulás>
+        <Érkezés>2024-12-07T23:00</Érkezés>
+        <Hossz>3670</Hossz>
+    </Járat>
+    <Járat id="RYR997">
+        <Indulás>2024-12-07T06:30</Indulás>
+        <Érkezés>2024-12-07T12:00</Érkezés>
+        <Hossz>2101</Hossz>
+    </Járat>
+    <Járat id="BCS5867">
+        <Indulás>2024-12-07T19:00</Indulás>
+        <Érkezés>2024-12-08T01:00</Érkezés>
+        <Hossz>8632</Hossz>
+    </Járat>
+
+    <!-- Repterek és a hozzájuk tartozó kifutópályák -->
+    <Reptér IATA="BUD">
+        <Ország>Magyarország</Ország>
+        <Város>Budapest</Város>
+        <Légiforgalom>Igen</Légiforgalom>
+    </Reptér>
+    <Kifutópálya id="01" fid="BUD">
+        <Paraméterek>
+            <Meredekség>0</Meredekség>
+            <Hossz>3707</Hossz>
+            <Irány>127</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+    <Kifutópálya id="02" fid="BUD">
+        <Paraméterek>
+            <Meredekség>0</Meredekség>
+            <Hossz>3009</Hossz>
+            <Irány>127</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+
+    <Reptér IATA="LAX">
+        <Ország>Amerikai Egyesült Államok</Ország>
+        <Város>Los Angeles</Város>
+        <Légiforgalom>Igen</Légiforgalom>
+    </Reptér>
+    <Kifutópálya id="01" fid="LAX">
+        <Paraméterek>
+            <Meredekség>1</Meredekség>
+            <Hossz>3939</Hossz>
+            <Irány>83</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+    <Kifutópálya id="02" fid="LAX">
+        <Paraméterek>
+            <Meredekség>1</Meredekség>
+            <Hossz>3383</Hossz>
+            <Irány>83</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+    <Kifutópálya id="03" fid="LAX">
+        <Paraméterek>
+            <Meredekség>1</Meredekség>
+            <Hossz>3318</Hossz>
+            <Irány>83</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+    <Kifutópálya id="04" fid="LAX">
+        <Paraméterek>
+            <Meredekség>1</Meredekség>
+            <Hossz>2721</Hossz>
+            <Irány>83</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+
+    <Reptér IATA="VIE">
+        <Ország>Ausztria</Ország>
+        <Város>Bécs</Város>
+        <Légiforgalom>Igen</Légiforgalom>
+    </Reptér>
+    <Kifutópálya id="01" fid="VIE">
+        <Paraméterek>
+            <Meredekség>0</Meredekség>
+            <Hossz>3600</Hossz>
+            <Irány>159</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+    <Kifutópálya id="02" fid="VIE">
+        <Paraméterek>
+            <Meredekség>0</Meredekség>
+            <Hossz>3500</Hossz>
+            <Irány>111</Irány>
+            <Aszfalt>Igen</Aszfalt>
+        </Paraméterek>
+    </Kifutópálya>
+
+    <!-- A repterek és járatok közti kapcsolat -->
+    <Tartalmaz Járat="CPA238" Start="BUD" Cél="LAX"/>
+    <Tartalmaz Járat="RYR997" Start="LAX" Cél="VIE"/>
+    <Tartalmaz Járat="BCS5867" Start="VIE" Cél="BUD"/>
+
+</Légforgalom>
