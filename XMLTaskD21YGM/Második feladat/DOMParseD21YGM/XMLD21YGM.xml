@@ -17,21 +17,25 @@
         <Repült>15000</Repült>
     </Kapitány>
 
-    <!-- Repülőgépek -->
+    <!-- Repülőgépek JAVÍTANI-->
     <Repülő Kapitány="01" Hívójel="CPA238">
         <Gyártó>Airbus</Gyártó>
         <Típus>A400M Atlas</Típus>
+        <Szín>Fekete</Szín>
         <Szín>Szürke</Szín>
     </Repülő>
     <Repülő Kapitány="02" Hívójel="RYR997">
         <Gyártó>Airbus</Gyártó>
         <Típus>A320-232</Típus>
-        <Szín>Fehér Kék Sárga</Szín>
+        <Szín>Fehér</Szín>
+        <Szín>Kék</Szín>
+        <Szín>Sárga</Szín>
     </Repülő>
     <Repülő Kapitány="03" Hívójel="BCS5867">
         <Gyártó>Boeing</Gyártó>
         <Típus>737-49R</Típus>
         <Szín>Fehér</Szín>
+        <Szín>Zöld</Szín>
     </Repülő>
 
     <!-- Járatok -->

@@ -33,7 +33,7 @@ public class DOMWriteD21YGM {
             // Konzolra írás
             printNode(root, 0);
             //Új fájlba mentés
-            writeDocumentToFile(document, "XMLD21YGM1.xml");
+            writeDocumentToFile(document, "XMLD21YGM02.xml");
         } catch (Exception e) {
             e.printStackTrace();
         }

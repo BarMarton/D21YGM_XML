@@ -1,4 +1,4 @@
-<Légforgalom>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Légforgalom>
 
     <!-- Kapitányok -->
     <Kapitány személyi_azonosító="01">
@@ -17,25 +17,21 @@
         <Repült>15000</Repült>
     </Kapitány>
 
-    <!-- Repülőgépek JAVÍTANI-->
-    <Repülő Kapitány="01" Hívójel="CPA238">
+    <!-- Repülőgépek -->
+    <Repülő Hívójel="CPA238" Kapitány="01">
         <Gyártó>Airbus</Gyártó>
         <Típus>A400M Atlas</Típus>
-        <Szín>Fekete</Szín>
         <Szín>Szürke</Szín>
     </Repülő>
-    <Repülő Kapitány="02" Hívójel="RYR997">
+    <Repülő Hívójel="RYR997" Kapitány="02">
         <Gyártó>Airbus</Gyártó>
         <Típus>A320-232</Típus>
-        <Szín>Fehér</Szín>
-        <Szín>Kék</Szín>
-        <Szín>Sárga</Szín>
+        <Szín>Fehér Kék Sárga</Szín>
     </Repülő>
-    <Repülő Kapitány="03" Hívójel="BCS5867">
+    <Repülő Hívójel="BCS5867" Kapitány="03">
         <Gyártó>Boeing</Gyártó>
         <Típus>737-49R</Típus>
         <Szín>Fehér</Szín>
-        <Szín>Zöld</Szín>
     </Repülő>
 
     <!-- Járatok -->
@@ -61,7 +57,7 @@
         <Város>Budapest</Város>
         <Légiforgalom>Igen</Légiforgalom>
     </Reptér>
-    <Kifutópálya id="01" fid="BUD">
+    <Kifutópálya fid="BUD" id="01">
         <Paraméterek>
             <Meredekség>0</Meredekség>
             <Hossz>3707</Hossz>
@@ -69,7 +65,7 @@
             <Aszfalt>Igen</Aszfalt>
         </Paraméterek>
     </Kifutópálya>
-    <Kifutópálya id="02" fid="BUD">
+    <Kifutópálya fid="BUD" id="02">
         <Paraméterek>
             <Meredekség>0</Meredekség>
             <Hossz>3009</Hossz>
@@ -83,7 +79,7 @@
         <Város>Los Angeles</Város>
         <Légiforgalom>Igen</Légiforgalom>
     </Reptér>
-    <Kifutópálya id="01" fid="LAX">
+    <Kifutópálya fid="LAX" id="01">
         <Paraméterek>
             <Meredekség>1</Meredekség>
             <Hossz>3939</Hossz>
@@ -91,7 +87,7 @@
             <Aszfalt>Igen</Aszfalt>
         </Paraméterek>
     </Kifutópálya>
-    <Kifutópálya id="02" fid="LAX">
+    <Kifutópálya fid="LAX" id="02">
         <Paraméterek>
             <Meredekség>1</Meredekség>
             <Hossz>3383</Hossz>
@@ -99,7 +95,7 @@
             <Aszfalt>Igen</Aszfalt>
         </Paraméterek>
     </Kifutópálya>
-    <Kifutópálya id="03" fid="LAX">
+    <Kifutópálya fid="LAX" id="03">
         <Paraméterek>
             <Meredekség>1</Meredekség>
             <Hossz>3318</Hossz>
@@ -107,7 +103,7 @@
             <Aszfalt>Igen</Aszfalt>
         </Paraméterek>
     </Kifutópálya>
-    <Kifutópálya id="04" fid="LAX">
+    <Kifutópálya fid="LAX" id="04">
         <Paraméterek>
             <Meredekség>1</Meredekség>
             <Hossz>2721</Hossz>
@@ -121,7 +117,7 @@
         <Város>Bécs</Város>
         <Légiforgalom>Igen</Légiforgalom>
     </Reptér>
-    <Kifutópálya id="01" fid="VIE">
+    <Kifutópálya fid="VIE" id="01">
         <Paraméterek>
             <Meredekség>0</Meredekség>
             <Hossz>3600</Hossz>
@@ -129,7 +125,7 @@
             <Aszfalt>Igen</Aszfalt>
         </Paraméterek>
     </Kifutópálya>
-    <Kifutópálya id="02" fid="VIE">
+    <Kifutópálya fid="VIE" id="02">
         <Paraméterek>
             <Meredekség>0</Meredekség>
             <Hossz>3500</Hossz>
@@ -139,8 +135,8 @@
     </Kifutópálya>
 
     <!-- A repterek és járatok közti kapcsolat -->
-    <Tartalmaz Járat="CPA238" Start="BUD" Cél="LAX"/>
-    <Tartalmaz Járat="RYR997" Start="LAX" Cél="VIE"/>
-    <Tartalmaz Járat="BCS5867" Start="VIE" Cél="BUD"/>
+    <Tartalmaz Cél="LAX" Járat="CPA238" Start="BUD"/>
+    <Tartalmaz Cél="VIE" Járat="RYR997" Start="LAX"/>
+    <Tartalmaz Cél="BUD" Járat="BCS5867" Start="VIE"/>
 
 </Légforgalom>
