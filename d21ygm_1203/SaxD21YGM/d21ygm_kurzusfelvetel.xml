@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ebben a félévben végzek, emiatt nem tudok órarendet csinálni a következő félévre -->
+<d21ygm_kurzusfelvetel tanev="2024" egyetem="ME">
+    <hallgato>
+        <hnev>Barabás Márton</hnev>
+        <szulev>2001</szulev>
+        <szak evf="2021">Programtervező Infromatikus</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="01" jovahagyas="nem" nyelv="magyar">
+            <kurzusnev>Szakdolgozat II.</kurzusnev>
+            <kredit>15</kredit>
+            <hely>NA</hely>
+            <idopont>NA</idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="02" jovahagyas="nem" nyelv="magyar">
+            <kurzusnev>Testnevelés I.</kurzusnev>
+            <kredit>0</kredit>
+            <hely>Uni-GYM</hely>
+            <idopont>NA</idopont>
+            <oktato>NA</oktato>
+        </kurzus>
+        <kurzus id="03" jovahagyas="nem" nyelv="magyar" oraado="Fazekas Levente Áron">
+            <kurzusnev>Mestersége Intelligencia alapjai</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXIII.</hely>
+            <idopont>Szerda 16:00</idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+        </kurzus>
+        <kurzus id="04" jovahagyas="nem" nyelv="magyar" oraado="Dr. Bednarik László">
+            <kurzusnev>Szakdolgozat II.</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf/103</hely>
+            <idopont>Kedd 10:00</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+    </kurzusok>
+</d21ygm_kurzusfelvetel>
